@@ -36,3 +36,49 @@ const combine = (inp1, inp2, inp3) => {
 };
 
 combine(1, 2, 3);
+
+// OBJECTS
+const user = {
+  name: "Max",
+  age: 30,
+  greet() {
+    console.log("Hello");
+    console.log(this.age);
+  },
+};
+
+console.log(user);
+
+class User {
+  constructor(name, age) {
+    this.name = "Max";
+    this.age = 30;
+  }
+
+  greet() {
+    console.log("Hello");
+  }
+}
+
+const user1 = new User("Max", 30);
+user1.greet();
+
+// ARRAYS
+const hobbies = ["Sports", "Cooking", "Reading"];
+console.log(hobbies[1]);
+
+hobbies.push("Programming");
+console.log(hobbies);
+
+const index = hobbies.findIndex((hobby) => hobby === "Cooking");
+console.log(index);
+
+const editedHobbies = hobbies.map((hobby) => hobby + '!');
+console.log(editedHobbies);
+
+const hobbiesObject = hobbies.map((hobby) => ({text: hobby}));
+console.log(hobbiesObject);
+
+function transformToObjects(numberArray) {
+  return numberArray.map(number => ({val: number}));
+}
