@@ -82,3 +82,23 @@ console.log(hobbiesObject);
 function transformToObjects(numberArray) {
   return numberArray.map(number => ({val: number}));
 }
+
+// DESTRUCTURING
+const userNameData = ["Max", "Schwrzmüller"]
+
+// const firstName = userNameData[0];
+const [firstName, lastName] = userNameData;
+console.log(firstName, lastName);
+
+const userDestructuring = {userName: "Max", age: 30};
+const { nameAlias: userName, age } = userDestructuring;
+console.log(nameAlias, age);
+
+// SPREAD OPERATOR
+const newHobbies = ["Programming"];
+const mergedHobbies = [...hobbies, ...newHobbies];
+
+const extendedUser = {
+  isAdmin: true,
+  ...userDestructuring
+}
