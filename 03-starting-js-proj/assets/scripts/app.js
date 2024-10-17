@@ -102,3 +102,50 @@ const extendedUser = {
   isAdmin: true,
   ...userDestructuring
 }
+
+// CONTROL STRUCTURES
+const password = prompt("Enter password");
+
+if (password === 'Hello') {
+  console.log('Hello works');
+} else if (password === 'hello') {
+  console.log('hello works');
+} else {
+  console.log('Access not granted.');
+}
+
+for (const hobby of hobbies) {
+  console.log(hobby);
+}
+
+// MANIPULATING DOM WITHOUT REACT
+const list = document.querySelector('ul');
+list.remove();
+
+// FUNCTIONS AS VALUES
+function handleTimeOut() {
+  console.log('Timed out!');
+}
+
+const handleTimeOut2 = () => console.log('Timed out 2!');
+
+setTimeout(handleTimeOut, 2000);
+setTimeout(handleTimeOut2, 2000);
+setTimeout(() => console.log('Timed out 3!'), 2000);
+
+function greeter(greetFn) {
+  greetFn();
+}
+
+greeter(() => console.log('Hello!'));
+
+// FUNCTIONS INSIDE FUNCTIONS
+function init() {
+  function greetInside() {
+    console.log('Hello from inside!');
+  }
+
+  greetInside();
+}
+
+init();
