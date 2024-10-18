@@ -149,3 +149,17 @@ function init() {
 }
 
 init();
+
+// PRIMITIVE VS REFERENCE TYPES
+let userMessage2 = 'Hello!';
+userMessage2 = userMessage2.concat('!!!'); // creates a new string
+
+hobbies.push('swimming'); // modifies the original array
+
+const abc = [1,2,3];
+// abc = []; // can't be overwritten
+abc.push(4); // can be modified
+
+let abc2 = [1,2,3];
+abc2 = []; // can be overwritten
+abc2.push(4); // can be modified
